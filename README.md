@@ -1,7 +1,7 @@
 # Monte Carlo Simulation in Python
 Python implementation of Monte Carlo Simulation.
 
-**Reference**: https://blog.minitab.com/en/the-4-simple-steps-for-creating-a-monte-carlo-simulation-with-engage-or-workspace
+**Reference**: **[Minitab blog](https://blog.minitab.com/en/the-4-simple-steps-for-creating-a-monte-carlo-simulation-with-engage-or-workspace)**
 
 ## Usage
 ### Creating the simulator object
@@ -33,7 +33,9 @@ mcs = MonteCarloSimulator(transfer_equation, bag_of_variables, variable_pdfs, nu
 ```
 
 ### Setting up variable_pdfs input
-The parameters for each distribution will be different. Currently, following distributions are supported. The example below shows mandatory keys to be present in the dictionary, for a given distribution:
+Parameters for each distribution will be different. These parameters are used to generate randome samples for the respective variable.
+
+Following distributions are supported currently. The example below shows mandatory keys to be present in the dictionary, for a given distribution:
 
 *normal:* 
 ```
@@ -87,7 +89,7 @@ result = mcs.simulate()
 ```
 
 ### Result
-The result will be a dictionary containing the mean and standard deviation of the result set 
+The result of the simulation will be a dictionary containing the mean and standard deviation of the result set. 
 
 Example:
 ```json
@@ -97,12 +99,12 @@ Example:
 ## Implementation Details
 Uses numpy library to generate random samples for a given variable using the supplied probability distribution
 
-1. In each iteration, random samples for each variable in the transfer equation is generated.
+1. In each iteration, one random sample for each variable in the transfer equation is generated.
 
 2. Transfer equation is evaluated with the generated random values, and the result is added into a list.
-    - Evaluation of an expression is handled using python eval() function. The bag of variables dictionary is used to supply all constituent variables and their values (randm values generated)
+    - Evaluation of an expression is handled using python eval() function. The bag of variables dictionary is used to supply all constituent variables and their values (random values generated)
 3. Steps 1 and 2 are repeated *num_iterations* times
-4. The values obtained from each iteration are accumulated and its *mean* and *standard deviation* are calculated
+4. Values obtained from each iteration are accumulated, and its *mean* and *standard deviation* are calculated
 
 ## Customize and Enhance
 
