@@ -1,3 +1,6 @@
+# Author: justinpolackal
+# Created: 07-Jan-2022
+#
 import numpy as np
 from numpy.random import default_rng
 import matplotlib.pyplot as plt
