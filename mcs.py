@@ -3,8 +3,8 @@
 #
 import numpy as np
 from numpy.random import default_rng
+import time
 import matplotlib.pyplot as plt
-
 
 class MonteCarloSimulator(object):
     def __init__(self, transfer_equation, bag_of_variables, variable_pdfs, num_iterations=1000):
@@ -198,9 +198,12 @@ pdfs = {
     "total_road_length": {"name": "uniform", "low": 45.0, "high": 55.0}  # total road length follows uniform distribution
 }
 
-mcs = MonteCarloSimulator(transfer_equation, bov, pdfs, num_iterations=10000)
+start = time.time()
+mcs = MonteCarloSimulator(transfer_equation, bov, pdfs, num_iterations=1000000)
 res = mcs.simulate()
+end = time.time()
 print(res)
+print(f"Took: {end - start}")
 
 
 # Now plot the histogram of all the values generated
