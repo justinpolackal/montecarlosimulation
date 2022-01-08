@@ -34,29 +34,51 @@ mcs = MonteCarloSimulator(transfer_equation, bag_of_variables, variable_pdfs, nu
 
 ### Setting up variable_pdfs input
 The parameters for each distribution will be different. Currently, following distributions are supported. The example below shows mandatory keys to be present in the dictionary, for a given distribution:
-normal:
-"<variable>": {"name": "normal", "mean": 1000.0, "sd": 15.0}
-poisson:
-"<variable>": {"name": "poisson", "mean": 1000.0, "scale": 5.0}
-binomial:
-"<variable>": {"name": "uniform", "low": 950.0, "high": 1050.0}
-lognormal:
-"<variable>": {"name": "lognormal", "mean": 950.0, "sigma": 50.0}
-pareto:
-"<variable>": {"name": "pareto", "mean": 950.0, "sigma": 50.0}
-exponential:
-"<variable>": {"name": "exponential", "scale": 950.0}
-gamma:
-"<variable>": {"name": "gamma", "shape": 1000.0, "scale": 950.0}
-weibull:
-"<variable>": {"name": "weibull", "shape": 1000.0}
-chisquare:
-"<variable>": {"name": "chisquare", "degfreedom": 1000.0}
-uniform:
-"<variable>": {"name": "uniform", "high": 1050.0, "low": 950.0}
-wald:
-"<variable>": {"name": "wald", "mean": 1050.0, "scale": 10.0}
 
+*normal:* 
+```
+"<variable>": {"name": "normal", "mean": 1000.0, "sd": 15.0}
+```
+*poisson: *
+```
+"<variable>": {"name": "poisson", "mean": 1000.0, "scale": 5.0}
+```
+*binomial:*
+```
+"<variable>": {"name": "uniform", "low": 950.0, "high": 1050.0}
+```
+*lognormal:*
+```
+"<variable>": {"name": "lognormal", "mean": 950.0, "sigma": 50.0}
+```
+*pareto:*
+```
+"<variable>": {"name": "pareto", "mean": 950.0, "sigma": 50.0}
+```
+*exponential:*
+```
+"<variable>": {"name": "exponential", "scale": 950.0}
+```
+*gamma:*
+```
+"<variable>": {"name": "gamma", "shape": 1000.0, "scale": 950.0}
+```
+*weibull:*
+```
+"<variable>": {"name": "weibull", "shape": 1000.0}
+```
+*chisquare:*
+```
+"<variable>": {"name": "chisquare", "degfreedom": 1000.0}
+```
+*uniform:*
+```
+"<variable>": {"name": "uniform", "high": 1050.0, "low": 950.0}
+```
+*wald:*
+```
+"<variable>": {"name": "wald", "mean": 1050.0, "scale": 10.0}
+```
 
 ### Running the simulation
 To run the simulation,
