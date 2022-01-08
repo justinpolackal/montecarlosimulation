@@ -106,5 +106,9 @@ Uses numpy library to generate random samples for a given variable using the sup
 3. Steps 1 and 2 are repeated *num_iterations* times
 4. Values obtained from each iteration are accumulated, and its *mean* and *standard deviation* are calculated
 
-## Customize and Enhance
+## Customize and Enhance - TODO Items
+- Wrap python eval function and secure its usage. THis can be done by creating a module for performing evaluation and to supply all necessary python functions that may come up in transfer equations
+- Avoid having to supply *bag_of_variables* as an input. *variable_pdfs* can be re-purposed 
+- Explore the possibility of multi-processing for the simulation execution, inorder to speed things up
+- simulate() method to return the list of generated result values, along with mean and standard deviation, so that the consuming code can use that data - for example plotting a histogram.
 
